@@ -1,0 +1,18 @@
+[tool.poetry]
+name = "schedule-recommend-api"
+version = "0.1.0"
+description = ""
+authors = ["Yasuto1218 <94950313+Yasuto1218@users.noreply.github.com>"]
+readme = "README.md"
+packages = [{include = "schedule_recommend_api"}]
+
+[tool.poetry.dependencies]
+python = "^3.10"
+pandas = "^2.1.4"
+numpy = "^1.26.2"
+fastapi = "^0.105.0"
+
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
