@@ -35,13 +35,13 @@ poerty shell
 # 停止
 exit
 ```
-## apiの起動
-[swagger](http://127.0.0.1:8000/docs)にアクセス
+## ローカルでAPIを起動
 
 ```
 cd src
 uvicorn main:app --reload
 ```
+[swagger](http://127.0.0.1:8000/docs)にアクセス
 
 ## コンテナでAPIを起動
 
@@ -55,6 +55,7 @@ docker build --platform=linux/amd64 -t schdule_recommend_api .
 ```
 docker run -it --rm -p 8010:8000 schdule_recommend_api
 ```
+[swagger](http://127.0.0.1:8010/docs)にアクセス
 
 ## APIの説明 
 ### チャンネル
