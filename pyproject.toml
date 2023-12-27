@@ -11,7 +11,11 @@ python = "^3.10"
 pandas = "^2.1.4"
 numpy = "^1.26.2"
 fastapi = "^0.105.0"
+pydantic = "^2.5.3"
 
+
+[tool.poetry.group.dev.dependencies]
+ipykernel = "^6.28.0"
 
 [build-system]
 requires = ["poetry-core"]
