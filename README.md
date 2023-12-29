@@ -41,7 +41,7 @@ exit
 cd src
 uvicorn main:app --reload
 ```
-[swagger](http://127.0.0.1:8000/docs)にアクセス
+[OpenAPI](http://127.0.0.1:8000/docs)にアクセス
 
 ## コンテナでAPIを起動
 
@@ -55,18 +55,24 @@ docker build --platform=linux/amd64 -t schdule_recommend_api .
 ```
 docker run -it --rm -p 8010:8000 schdule_recommend_api
 ```
-[swagger](http://127.0.0.1:8010/docs)にアクセス
+[OpenAPI](http://127.0.0.1:8010/docs)にアクセス
 
 ## APIの説明 
+### 使い方
+- src/schedule_data/にcsvデータを置く(仮のデータベース)
+- ローカル環境、または、dockerでAPIを起動
+- OpenAPIに接続しAPIを叩く
+
 ### チャンネル
 http://127.0.0.0.1:8000
 
 | メソッド | HTTPリクエスト| 説 明 |
 |:-------|:------|:-----|
-| get_recommend | GET / get_recommend_schedule_id | 類似する工程表番号を取得 |
+| get_recommend | POST / get_recommend_schedule_name | 類似する工程表名を取得 |
+| get_recommend | POST / get_recommend_schedule_json | 類似する工程表をjson形式を取得(開発中) |
 
 
-### パラメータ
+### パラメータ(作成中)
 | パラメータ | type | 説明 | required |
 |:-------|:------|:-----|:-----|
 | feature1 | int | {0, 1} | ✅ |

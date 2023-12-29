@@ -39,8 +39,8 @@ class OutputNameAndIndex(BaseModel):
     best_cos_similarity: float = Field(description="コサイン類似度")
 
 
-@app.post("/get_recommend_schedule_id")
-def get_recommend_schedule_id(ConstructionWorks: ConstructionWorks) -> OutputNameAndIndex:
+@app.post("/get_recommend/get_recommend_schedule_id")
+def get_recommend_schedule_name(ConstructionWorks: ConstructionWorks) -> OutputNameAndIndex:
     """パラーメータから類似する工程表の番号を取得する
     """
     try:
@@ -69,8 +69,8 @@ def get_recommend_schedule_id(ConstructionWorks: ConstructionWorks) -> OutputNam
         raise HTTPException(status_code=400, detail=str(e))
 
 
-@app.get("/get_recommend_schedule_param")
-def get_recommend_schedule_param(feature_1: int, feature_2: float, feature_3: int):
+@app.post("/get_recommend/get_recommend_schedule_param")
+def get_recommend_schedule_json(feature_1: int, feature_2: float, feature_3: int):
     return "WIP"
 
 
