@@ -2,3 +2,5 @@ tmp
 *.csv
 *.xlsx
 *.xlsm
+*.pyc
+__pycache__
