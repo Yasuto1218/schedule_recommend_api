@@ -51,7 +51,7 @@ cd schedule_recommend_api
 docker build --platform=linux/amd64 -t schdule_recommend_api . 
 ```
 
-コンテナを8001番:8000で起動 
+コンテナを8010ポートで起動 
 ```
 docker run -it --rm -p 8010:8000 schdule_recommend_api
 ```
